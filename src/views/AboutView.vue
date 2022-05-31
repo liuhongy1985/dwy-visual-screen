@@ -1,5 +1,19 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <datav />
 </template>
+<script>
+import datav from '@/components/datav/index.vue'
+export default {
+  name: 'App',
+  components: {
+    datav
+  },
+  data() {
+    return {}
+  },
+  mounted() {
+  },
+  methods: {
+  },
+}
+</script>
