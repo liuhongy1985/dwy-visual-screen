@@ -4,17 +4,14 @@
             <span class="M-Separator" v-if="i===','">{{i}}</span>
             <Flop v-else :ref="'flipper' + index" />
         </template>
-        <vueCountTo :startVal='0' :endVal='123123' :duration='3000'></vueCountTo>
     </div>
 </template>
 <script>
 import Flop from '@/components/Flop.vue'
-import vueCountTo from '@/components/vue-countTo'
 export default {
     name: 'App',
     components: {
-        Flop,
-        vueCountTo
+        Flop
     },
     data() {
         return {
@@ -28,18 +25,15 @@ export default {
     mounted() {
         this.formatNumber(1234457).forEach((i, index) => {
             if (i!==',') {
-                this.$refs[`flipper${index}`][0].setFront(i)
+                this.$refs[`flipper${index}`][0].flipDown(0,i)
             }
         });
-        setTimeout(() => {
-            this.run()
-        }, 3000);
     },
     methods: {
         run() {
             let _this = this
             // 获取当前时间
-            for (let i = 0; i < this.itemList.length; i++) {
+            for (let i = 0; i < this.formatNumber(3456734).length; i++) {
                 if (this.itemList[i] === this.valueData[i]) {
                     continue
                 }
@@ -78,8 +72,17 @@ export default {
 }
 .M-Separator {
     display: inline-block;
-    margin: 0 3px;
+    position: relative;
+    width: 33px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 10px;
+    background: orangered;
     font-size: 33px;
+    color: #fff;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
     text-align: center;
+    font-family: "Helvetica Neue";
+    vertical-align: top;
 }
 </style>
