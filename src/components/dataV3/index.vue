@@ -12,6 +12,7 @@
         <div class="scrollNum-container-top">
             <LeftCenterVue></LeftCenterVue>
             <CenterCmpVue></CenterCmpVue>
+            <RightCenter></RightCenter>
         </div>
         <div class="scrollNum-container-bottom">
 
@@ -24,11 +25,13 @@
 <script>
 import LeftCenterVue from './LeftCenter.vue'
 import CenterCmpVue from './CenterCmp.vue'
+import RightCenter from './RightCenter.vue'
 export default {
   name: 'DataView',
   components: {
     LeftCenterVue,
-    CenterCmpVue
+    CenterCmpVue,
+    RightCenter
   },
   data() {
     return {}
