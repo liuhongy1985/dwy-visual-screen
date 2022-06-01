@@ -15,7 +15,10 @@
             <RightCenter></RightCenter>
         </div>
         <div class="scrollNum-container-bottom">
-
+            <RightBottomBox1Vue></RightBottomBox1Vue>
+            <RightBottomBox2Vue></RightBottomBox2Vue>
+            <RightBottomBox3Vue></RightBottomBox3Vue>
+            <RightBottomBox4Vue></RightBottomBox4Vue>
         </div>
       </div>
     </dv-full-screen-container>
@@ -26,12 +29,21 @@
 import LeftCenterVue from './LeftCenter.vue'
 import CenterCmpVue from './CenterCmp.vue'
 import RightCenter from './RightCenter.vue'
+import RightBottomBox1Vue from './RightBottom-box1.vue'
+import RightBottomBox2Vue from './RightBottom-box2.vue'
+import RightBottomBox3Vue from './RightBottom-box3.vue'
+import RightBottomBox4Vue from './RightBottom-box4.vue'
+
 export default {
   name: 'DataView',
   components: {
     LeftCenterVue,
     CenterCmpVue,
-    RightCenter
+    RightCenter,
+    RightBottomBox1Vue,
+    RightBottomBox2Vue,
+    RightBottomBox3Vue,
+    RightBottomBox4Vue
   },
   data() {
     return {}
@@ -98,14 +110,17 @@ export default {
     padding: 10px;
 
     .scrollNum-container-top {
-      height: 40%;
+      height: 45%;
       display: flex;
       flex-direction: row;
     }
 
     .scrollNum-container-bottom {
-      height: 60%;
-      background-color: skyblue;
+      height: 55%;
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
     }
   }
 
