@@ -103,7 +103,7 @@ export default {
   position: absolute;
   left: 0;
   right: 0;
-  background: orangered;
+  background: linear-gradient(45deg, #ea553d, 50%, #fc9b71);
   overflow: hidden;
   box-sizing: border-box;
 }
