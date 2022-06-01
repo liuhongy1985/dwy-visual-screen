@@ -1,10 +1,9 @@
 <template>
     <div class="right-center">
-        <div class="rc-header">派单运抵情况</div>
         <dv-border-box-7 class="rc-header-box" :color="['#0069b3', '#20d6d9']">
             <div class="rc-details">
                 <span class="rc-details-before"></span>
-                <span class="rc-details-span">运单送达情况</span>
+                <span class="rc-details-span">投保情况</span>
                 <span class="rc-details-after"></span>
                 <dv-charts class="rc-chart" :option="option" />
             </div>
@@ -21,39 +20,33 @@ export default {
                 series: [
                     {
                         type: 'gauge',
-                        splitNum: 11,
-                        radius:95,
+                        startAngle: -Math.PI / 2,
+                        endAngle: Math.PI * 1.5,
+                        arcLineWidth: 10,
+                        radius:45,
                         data: [
-                            { name: 'itemA', value: 90, gradient: ['#fcda3d','#02d315','#00d2e9','#02d315','#fa903c'] ,localGradient :true}
+                            { name: 'itemA', value: 65, gradient: ['#c1f634', '#61e498', '#07d1f7'] ,lineWidth:10,localGradient :true}
                         ],
                         axisLabel: {
-                            formatter: '{value}%',
+                            show: false
                         },
                         axisTick: {
-                            style: {
-                                stroke: '#407fff',
-                            }
-                        },
-                        axisLabel: {
-                            style: {
-                                stroke: '#407fff',
-                            }
+                            show: false
                         },
                         pointer: {
-                            style: {
-                                fill: '#407fff',
-                            }
+                            show: false
+                        },
+                        dataItemStyle: {
+                            lineCap: 'round'
                         },
                         details: {
                             show: true,
-                            offset: [0, 80],
                             formatter: '{value}%',
                             style: {
-                                fontSize: 20,
-                                color: '#407fff',
+                                fill: '#1ed3e5',
+                                fontSize: 20
                             }
-                        },
-                        animationCurve: 'easeOutBounce'
+                        }
                     }
                 ]
             }
@@ -64,22 +57,11 @@ export default {
 
 <style lang="less" scoped>
 .right-center {
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    height: 49%;
     display: flex;
-    flex-direction: column;
-     align-items: flex-start;
-    .rc-header {
-        height: 50px;
-        line-height: 50px;
-        font-weight: bold;
-        font-size: 20px;
-        color: #fff;
-    }
 
     .rc-header-box {
-        height: calc(~"100% - 50px");
-        width: 100%;
 
         .rc-details-before {
             display: inline-block;
@@ -107,8 +89,8 @@ export default {
             padding: 20px;
 
             .rc-chart {
-                height: calc(~"100% - 70px");
-                width: 90%;
+                height: calc(~"100% - 40px");
+                width: 100%;
             }
         }
     }
