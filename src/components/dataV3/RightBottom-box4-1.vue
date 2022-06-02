@@ -3,7 +3,7 @@
         <dv-border-box-7 class="rc-header-box" :color="['#0069b3', '#20d6d9']">
             <div class="rc-details">
                 <span class="rc-details-before"></span>
-                <span class="rc-details-span">本月新增车辆情况</span>
+                <span class="rc-details-span">注册用户活跃情况</span>
                 <span class="rc-details-after"></span>
                 <dv-capsule-chart :config="config" class="rc-chart" />
             </div>
@@ -21,24 +21,16 @@ export default {
                 unit: '单位',
                 data: [
                     {
-                        name: '南阳',
+                        name: '货主',
                         value: 167
                     },
                     {
-                        name: '周口',
+                        name: '承运商',
                         value: 67
                     },
                     {
-                        name: '漯河',
+                        name: '司机',
                         value: 123
-                    },
-                    {
-                        name: '郑州',
-                        value: 55
-                    },
-                    {
-                        name: '西峡',
-                        value: 98
                     }
                 ]
             }

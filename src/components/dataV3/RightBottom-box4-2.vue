@@ -3,7 +3,7 @@
         <dv-border-box-7 class="rc-header-box" :color="['#0069b3', '#20d6d9']">
             <div class="rc-details">
                 <span class="rc-details-before"></span>
-                <span class="rc-details-span">本月新增车辆情况</span>
+                <span class="rc-details-span">注册用户人数占比情况</span>
                 <span class="rc-details-after"></span>
                 <dv-charts class="rc-chart" :option="option" />
             </div>
@@ -17,6 +17,7 @@ export default {
     data() {
         return {
             option: {
+                color: ['#0069b3', '#20d6d9','#c1f634'],
                 legend: {
                     orient: 'vertical',
                     left: 'left'
@@ -25,11 +26,9 @@ export default {
                     {
                         type: 'pie',
                         data: [
-                            { name: '可口可乐', value: 93 },
-                            { name: '百事可乐', value: 32 },
-                            { name: '哇哈哈', value: 65 },
-                            { name: '康师傅', value: 44 },
-                            { name: '统一', value: 52 },
+                            { name: '货主', value: 93 },
+                            { name: '承运商', value: 32 },
+                            { name: '司机', value: 65 },
                         ],
                         radius: ['40%', '50%'],
                         insideLabel: {
