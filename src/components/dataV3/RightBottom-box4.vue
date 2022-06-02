@@ -1,6 +1,9 @@
 <template>
     <div class="left-center">
-        
+        <div class="lc-header">用户注册情况分析</div>
+        <div class="lc-box4">
+
+        </div>
     </div>
 </template>
 
@@ -64,6 +67,11 @@ export default {
 .left-center {
     width: 27%;
     height: 100%;
-    background-color: #fff;
+    .lc-box4 {
+        width: 100%;
+        height: calc(100% - 50px);
+        background: #fff;
+       
+    }
 }
 </style>

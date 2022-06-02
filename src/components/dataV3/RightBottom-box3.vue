@@ -1,61 +1,23 @@
 <template>
     <div class="left-center">
-        <dv-border-box-7 class="rc-header-box" :color="['#0069b3', '#20d6d9']">
-        </dv-border-box-7>
+        <box3_1></box3_1>
+        <box3_2></box3_2>
     </div>
 </template>
 
 <script>
+import box3_1 from './RightBottom-box3-1';
+import box3_2 from './RightBottom-box3-2';
+
 export default {
     name: 'LeftChart2',
+    components: {
+        box3_1,
+        box3_2
+    },
     data() {
         return {
-            option: {
-                grid: {
-                    left: '25%',
-                    right: '4%',
-                    containLabel: true
-                },
-                xAxis: {
-                    data: 'value',
-                    axisLabel: {
-                        style: {
-                            fill: '#0069b3',
-                        }
-                    }
-                },
-                yAxis: {
-                    axisLabel: {
-                        interval: 0,
-                        style: {
-                            fill: '#fff',
-                        }
-                    },
-                    splitLine: {
-                        show: false,
-                    },
-                    data: ['厦门达达', '厦门达达股份有限公司', '厦门达达股份有限公司', '厦门达达股份有限公司', '厦门达达股份有限公司', '厦门达达股份有限公司', '厦门达达股份有限公司', '厦门达达股份有限公司', '厦门达达111']
-                },
-                series: [
-                    {
-
-                        data: [1200, 2230, 1900, 2100, 3500, 4200, 3985, 4999, 7999],
-                        gradient: {
-                            color: ['#ea553d', '#fc9b71']
-                        },
-                        type: 'bar',
-                        animationCurve: 'easeOutBack',
-                        label: {
-                            show: true,
-                            position: 'right',
-                            offset: [20, 0],
-                            style: {
-                                fill: '#fff'
-                            }
-                        },
-                    }
-                ]
-            }
+            
         }
     }
 }
@@ -65,10 +27,8 @@ export default {
 .left-center {
     width: 26%;
     height: calc(100% - 50px);
-
-    .rc-header-box {
-        height: 100%;
-        width: 100%;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 </style>
