@@ -179,7 +179,7 @@ export default {
 
             .rc-chart {
                 height: calc(~"100% - 40px");
-                width: 90%;
+                width: 100%;
             }
         }
     }
