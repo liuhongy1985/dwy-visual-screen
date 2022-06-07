@@ -1,7 +1,10 @@
 <template>
     <div class="left-center">
-        <box3_1></box3_1>
+        <div class="lc-header"></div>
+        <div class="lc-box4">
+            <box3_1></box3_1>
         <box3_2></box3_2>
+        </div>
     </div>
 </template>
 
@@ -25,10 +28,16 @@ export default {
 
 <style lang="less" scoped>
 .left-center {
-    width: 26%;
-    height: calc(100% - 50px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    width: 27%;
+    height: 100%;
+
+    .lc-box4 {
+        width: 100%;
+        height: calc(100% - 50px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 2px;
+    }
 }
 </style>

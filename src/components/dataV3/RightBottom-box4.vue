@@ -36,6 +36,7 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        padding-top: 2px;
     }
 }
 </style>

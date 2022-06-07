@@ -37,7 +37,7 @@ export default {
     .right-center-Box2 {
         margin-left: 2%;
         width: 48%;
-        height: calc(100% - 50px);
+        height: calc(100% - 52px);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
